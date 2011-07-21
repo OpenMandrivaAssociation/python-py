@@ -1,41 +1,49 @@
-%define module py
+%define module	py
+%define name	python-%{module}
+%define version	1.4.4
+%define	release	%mkrel 1
 
-Name:           python-%{module}
-Version:        0.9.2
-Release:        %mkrel 1
+Summary:        Python development support library
+Name:           %{name}
+Version:        %{version}
+Release:        %{release}
 License:        MIT
-Source:         %{module}-%{version}.tar.gz
+Source:         %{module}-%{version}.zip
 Group:          Development/Python
-Summary:        Agile development and test support library
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Url:            http://pypi.python.org/pypi/py
-BuildRequires:  python-devel
+Url:            http://pylib.org
+BuildArch:	noarch
 BuildRequires:  python-setuptools
+BuildRequires:	python-sphinx
 
 %description
-The py lib is a development support library featuring these tools and APIs:
-    * py.test: cross-project testing tool with many advanced features
-    * py.execnet: ad-hoc code distribution to SSH, Socket and local sub processes
-    * py.magic.greenlet: micro-threads on standard CPython ("stackless-light") and PyPy
-    * py.path: path abstractions over local and subversion files
-    * py.code: dynamic code compile and traceback printing support
+The py lib is a development support library featuring these tools and
+APIs:
+
+* py.path: uniform local and svn path objects
+* py.apipkg: explicit API control and lazy-importing
+* py.iniconfig: easy parsing of .ini files
+* py.code: dynamic code generation and introspection
+* py.path: uniform local and svn path objects
 
 %prep
-%setup -q -n %module-%version
+%setup -q -n %{module}-%{version}
 
 %build
-CFLAGS="%{optflags}" python setup.py build
+%__python setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install --root $RPM_BUILD_ROOT --install-purelib=%{python_sitearch}
+%__rm -rf %{buildroot}
+PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot} --record=FILE_LIST
+pushd doc
+PYTHONPATH=../build/lib make html
+popd
 
 %clean
-rm -rf %buildroot
+%__rm -rf %{buildroot}
 
-%files 
+%files -f FILE_LIST
 %defattr(-,root,root)
-%doc CHANGELOG LICENSE README.txt
-%{_bindir}/py*
-%{python_sitearch}/*
+%doc CHANGELOG LICENSE README.txt doc/_build/html
+
 
