@@ -1,6 +1,6 @@
 %define module	py
 %define name	python-%{module}
-%define version	1.4.5
+%define version	1.4.6
 %define	release	%mkrel 1
 
 Summary:        Python development support library
