@@ -1,6 +1,6 @@
 %define module	py
 %define name	python-%{module}
-%define version	1.4.8
+%define version	1.4.9
 %define	rel		1
 %if %mdkversion < 201100
 %define	release	%mkrel %rel
