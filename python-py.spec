@@ -1,6 +1,6 @@
 %define module	py
 %define name	python-%{module}
-%define version	1.4.9
+%define version	1.4.10
 %define	rel		1
 %if %mdkversion < 201100
 %define	release	%mkrel %rel
@@ -55,6 +55,10 @@ popd
 
 
 %changelog
+* Fri Oct 19 2012 Lev Givon <lev@mandriva.org> 1.4.10-1
++ Revision: 819088
+- Update to 1.4.10.
+
 * Fri Aug 31 2012 Lev Givon <lev@mandriva.org> 1.4.9-1
 + Revision: 816118
 - Update to 1.4.9.
