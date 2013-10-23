@@ -10,12 +10,11 @@
 
 Summary:        Python development support library
 Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Version:        1.4.17
+Release:        1
 License:        MIT
-Source:			http://pypi.python.org/packages/source/p/%{module}/%{module}-%{version}.zip
+Source:			http://pypi.python.org/packages/source/p/py/py-%{version}.tar.gz
 Group:          Development/Python
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Url:            http://pylib.org
 BuildArch:		noarch
 BuildRequires:  python-setuptools
@@ -38,19 +37,16 @@ APIs:
 %__python setup.py build
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
 pushd doc
 PYTHONPATH=../build/lib make html
 popd
 
 %clean
-%__rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
 %doc CHANGELOG LICENSE README.txt doc/_build/html
-%py_sitedir/py*
+%py_puresitedir/py*
 
 
 
@@ -86,4 +82,5 @@ popd
 
 * Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 0.9.2
 - first release for Mandriva 
+
 
