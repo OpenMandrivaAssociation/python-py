@@ -1,16 +1,12 @@
 %define module	py
-%define name	python-%{module}
-%define version	1.4.10
 %define	rel		1
 %if %mdkversion < 201100
-%define	release	%mkrel %rel
 %else
-%define	release	%rel
 %endif
 
 Summary:        Python development support library
-Name:           %{name}
-Version:        1.4.17
+Name:           python-%{module}
+Version:        1.4.20
 Release:        1
 License:        MIT
 Source:			http://pypi.python.org/packages/source/p/py/py-%{version}.tar.gz
@@ -37,7 +33,7 @@ APIs:
 %__python setup.py build
 
 %install
-PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
+PYTHONDONTWRITEBYTECODE= python setup.py install --root=%{buildroot}
 pushd doc
 PYTHONPATH=../build/lib make html
 popd
@@ -46,7 +42,7 @@ popd
 
 %files
 %doc CHANGELOG LICENSE README.txt doc/_build/html
-%py_puresitedir/py*
+%{py_puresitedir}/py*
 
 
 
@@ -82,5 +78,6 @@ popd
 
 * Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 0.9.2
 - first release for Mandriva 
+
 
 
