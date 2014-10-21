@@ -2,7 +2,7 @@
 
 Summary:        Python development support library
 Name:           python-%{module}
-Version:        1.4.24
+Version:        1.4.25
 Release:        1
 License:        MIT
 Source:			http://pypi.python.org/packages/source/p/py/py-%{version}.tar.gz
