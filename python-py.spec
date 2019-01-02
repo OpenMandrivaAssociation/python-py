@@ -2,8 +2,8 @@
 
 Summary:        Python development support library
 Name:           python-%{module}
-Version:        1.4.26
-Release:        2
+Version:        1.7.0
+Release:        1
 License:        MIT
 Source:			http://pypi.python.org/packages/source/p/py/py-%{version}.tar.gz
 Group:          Development/Python
@@ -37,5 +37,5 @@ popd
 %clean
 
 %files
-%doc CHANGELOG LICENSE README.txt doc/_build/html
+%doc CHANGELOG LICENSE README.rst doc/_build/html
 %{py_puresitedir}/py*
