@@ -10,7 +10,7 @@ Group:          Development/Python
 Url:            http://pylib.org
 BuildArch:		noarch
 BuildRequires:  python-setuptools
-BuildRequires:  python-setuptools-scm
+BuildRequires:  python-setuptools_scm
 BuildRequires:	python-sphinx
 
 %description
