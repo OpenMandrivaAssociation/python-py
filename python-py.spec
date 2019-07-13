@@ -2,10 +2,10 @@
 
 Summary:        Python development support library
 Name:           python-%{module}
-Version:        1.7.0
-Release:        1
+Version:	1.8.0
+Release:	1
 License:        MIT
-Source:			http://pypi.python.org/packages/source/p/py/py-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/f1/5a/87ca5909f400a2de1561f1648883af74345fe96349f34f737cdfc94eba8c/py-1.8.0.tar.gz
 Group:          Development/Python
 Url:            http://pylib.org
 BuildArch:		noarch
@@ -34,8 +34,6 @@ PYTHONDONTWRITEBYTECODE= python setup.py install --root=%{buildroot}
 pushd doc
 PYTHONPATH=../build/lib make html
 popd
-
-%clean
 
 %files
 %doc CHANGELOG LICENSE README.rst doc/_build/html

@@ -1,9 +1,2 @@
-removed_sources:
-  py-1.4.10.zip: 421cf7b1cd9fcf915eb05e354f75c2520da6ccb0
-  py-1.4.17.tar.gz: e9603c12cb7be07c012b8d56db4c141c675ad5ae
-  py-1.4.20.tar.gz: b6d34d50ccab43b841c1434a7a5274935f071299
-  py-1.4.24.tar.gz: c9017fd00755a1a82a1a1347a7f5d7f62396e793
-  py-1.4.25.tar.gz: b91cbf0ac958d00a5738c70f1d1243c35f1b69c6
-  py-1.4.26.tar.gz: 5d9aaa67c1da2ded5f978aa13e03dfe780771fea
 sources:
-  py-1.7.0.tar.gz: 6d54b3d60e84440c0f9b5a2ecc1a4b10c2e30d58
+  py-1.8.0.tar.gz: b8c56a3648e05ed92722e1a040b55354d9f9ce84
