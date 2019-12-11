@@ -3,7 +3,7 @@
 Summary:        Python development support library
 Name:           python-%{module}
 Version:	1.8.0
-Release:	1
+Release:	2
 License:        MIT
 Source0:	https://files.pythonhosted.org/packages/f1/5a/87ca5909f400a2de1561f1648883af74345fe96349f34f737cdfc94eba8c/py-1.8.0.tar.gz
 Group:          Development/Python
