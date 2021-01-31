@@ -3,9 +3,9 @@
 Summary:        Python development support library
 Name:           python-%{module}
 Version:	1.9.0
-Release:	1
+Release:	2
 License:        MIT
-Source0:	https://files.pythonhosted.org/packages/97/a6/ab9183fe08f69a53d06ac0ee8432bc0ffbb3989c575cc69b73a0229a9a99/py-1.9.0.tar.gz
+Source0:	https://files.pythonhosted.org/packages/97/a6/ab9183fe08f69a53d06ac0ee8432bc0ffbb3989c575cc69b73a0229a9a99/py-%{version}.tar.gz
 Group:          Development/Python
 Url:            http://pylib.org
 BuildArch:		noarch
