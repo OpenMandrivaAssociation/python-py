@@ -2,10 +2,10 @@
 
 Summary:        Python development support library
 Name:           python-%{module}
-Version:	1.9.0
-Release:	2
+Version:	1.11.0
+Release:	1
 License:        MIT
-Source0:	https://files.pythonhosted.org/packages/97/a6/ab9183fe08f69a53d06ac0ee8432bc0ffbb3989c575cc69b73a0229a9a99/py-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/98/ff/fec109ceb715d2a6b4c4a85a61af3b40c723a961e8828319fbcb15b868dc/py-1.11.0.tar.gz
 Group:          Development/Python
 Url:            http://pylib.org
 BuildArch:		noarch
@@ -36,5 +36,5 @@ PYTHONPATH=../build/lib make html
 popd
 
 %files
-%doc CHANGELOG LICENSE README.rst doc/_build/html
+%doc LICENSE README.rst doc/_build/html
 %{py_puresitedir}/py*
