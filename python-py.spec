@@ -37,5 +37,5 @@ PYTHONDONTWRITEBYTECODE= python setup.py install --root=%{buildroot}
 #popd
 
 %files
-%doc LICENSE README.rst doc/_build/html
+%doc LICENSE README.rst
 %{py_puresitedir}/py*
