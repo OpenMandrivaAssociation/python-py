@@ -9,6 +9,7 @@ Source0:	https://files.pythonhosted.org/packages/98/ff/fec109ceb715d2a6b4c4a85a6
 Group:          Development/Python
 Url:            http://pylib.org
 BuildArch:		noarch
+BuildRequires:  python3dist(babel)
 BuildRequires:  python-setuptools
 BuildRequires:  python-setuptools_scm
 BuildRequires:	python-sphinx
