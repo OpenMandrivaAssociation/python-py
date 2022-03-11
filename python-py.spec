@@ -32,10 +32,10 @@ APIs:
 
 %install
 PYTHONDONTWRITEBYTECODE= python setup.py install --root=%{buildroot}
-pushd doc
-PYTHONPATH=../build/lib make html
-popd
+#pushd doc
+#PYTHONPATH=../build/lib make html
+#popd
 
 %files
-%doc LICENSE README.rst doc/_build/html
+%doc LICENSE README.rst
 %{py_puresitedir}/py*
