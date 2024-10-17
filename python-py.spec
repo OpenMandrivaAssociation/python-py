@@ -7,7 +7,7 @@ Release:	3
 License:        MIT
 Source0:	https://files.pythonhosted.org/packages/98/ff/fec109ceb715d2a6b4c4a85a61af3b40c723a961e8828319fbcb15b868dc/py-1.11.0.tar.gz
 Group:          Development/Python
-Url:            http://pylib.org
+Url:            https://pylib.org
 BuildArch:		noarch
 BuildRequires:  python3dist(babel)
 BuildRequires:  python-setuptools
