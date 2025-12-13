@@ -9,10 +9,11 @@ Source0:	https://files.pythonhosted.org/packages/98/ff/fec109ceb715d2a6b4c4a85a6
 Group:          Development/Python
 Url:            https://pylib.org
 BuildArch:		noarch
-BuildRequires:  python3dist(babel)
-BuildRequires:  python-setuptools
-BuildRequires:  python-setuptools_scm
-BuildRequires:	python-sphinx
+BuildSystem:	python
+BuildRequires:  python%{pyver}dist(babel)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(setuptools-scm)
+BuildRequires:	python%{pyver}dist(sphinx)
 
 %description
 The py lib is a development support library featuring these tools and
@@ -23,18 +24,6 @@ APIs:
 * py.iniconfig: easy parsing of .ini files
 * py.code: dynamic code generation and introspection
 * py.path: uniform local and svn path objects
-
-%prep
-%setup -q -n %{module}-%{version}
-
-%build
-%__python setup.py build
-
-%install
-PYTHONDONTWRITEBYTECODE= python setup.py install --root=%{buildroot}
-#pushd doc
-#PYTHONPATH=../build/lib make html
-#popd
 
 %files
 %doc LICENSE README.rst
