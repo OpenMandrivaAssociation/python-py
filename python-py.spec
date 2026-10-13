@@ -3,7 +3,7 @@
 Summary:        Python development support library
 Name:           python-%{module}
 Version:	1.11.0
-Release:	4
+Release:	5
 License:        MIT
 Source0:	https://files.pythonhosted.org/packages/98/ff/fec109ceb715d2a6b4c4a85a61af3b40c723a961e8828319fbcb15b868dc/py-1.11.0.tar.gz
 Group:          Development/Python
@@ -24,6 +24,10 @@ APIs:
 * py.iniconfig: easy parsing of .ini files
 * py.code: dynamic code generation and introspection
 * py.path: uniform local and svn path objects
+
+%build -p
+# No git tag in the sdist, so setuptools-scm would otherwise emit 0.0.0.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 
 %files
 %doc LICENSE README.rst
